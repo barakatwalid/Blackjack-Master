@@ -74,6 +74,10 @@ onlyBuiltDependencies:
   - msw
   - unrs-resolver
 
+# Allow the native bundler install step required by Vite.
+allowBuilds:
+  esbuild: true
+
 overrides:
   # replit uses linux-x64 only, we can exclude all other platforms
   "esbuild>@esbuild/darwin-arm64": "-"
