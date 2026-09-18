@@ -1,5 +1,7 @@
 # Royal Ace Blackjack
 
+[![CI](https://github.com/barakatwalid/Blackjack-Master/actions/workflows/ci.yml/badge.svg)](https://github.com/barakatwalid/Blackjack-Master/actions/workflows/ci.yml)
+
 A full-stack social blackjack platform demonstrating server-authoritative game state, transactional virtual-wallet design, idempotent APIs, and a payment-safe product boundary.
 
 ## Engineering highlights
@@ -12,6 +14,8 @@ A full-stack social blackjack platform demonstrating server-authoritative game s
 - Explicit safeguards that keep demo chips non-transferable and prevent real payment activation
 
 ## Run and verify
+
+Prerequisites: Node.js 24+ and pnpm 11.19.0+.
 
 - `PORT=4173 BASE_PATH=/ pnpm --filter @workspace/blackjack run dev` — web app.
 - `PORT=5000 DATABASE_URL=... WEB_ORIGIN=http://localhost:4173 pnpm --filter @workspace/api-server run dev` — API.
@@ -65,3 +69,7 @@ Chips have no cash value and cannot be withdrawn, transferred, resold, exchanged
 Server-authoritative gameplay now exists in code, but hosted-database staging, account recovery, abuse/rate-limit testing, provider approval, and signed payment webhooks are still required.
 
 Do not accept real payments yet. See `docs/ECONOMY-ROLL_OUT.md` for the remaining launch gates.
+
+## License
+
+MIT
