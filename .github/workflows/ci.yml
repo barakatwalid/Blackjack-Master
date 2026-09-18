@@ -38,4 +38,7 @@ jobs:
         run: pnpm typecheck
 
       - name: Build
+        env:
+          PORT: 4173
+          BASE_PATH: /
         run: pnpm build
